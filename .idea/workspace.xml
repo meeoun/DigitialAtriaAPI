@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="631d0144-3808-48cf-a823-26a18ef4f7b0" name="Default Changelist" comment="" />
+    <list default="true" id="631d0144-3808-48cf-a823-26a18ef4f7b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shared.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shared.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Posts/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Uploads/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Uploads/UploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/FileToS3.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/FileToS3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_153520_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_153520_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +22,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -147,10 +162,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Vagrant Boxes\LaravelProject\shared\app\Models" />
+      <recent name="F:\Vagrant Boxes\LaravelProject\shared\public\images" />
+      <recent name="F:\Vagrant Boxes\LaravelProject\shared\public" />
+      <recent name="F:\Vagrant Boxes\LaravelProject\shared\database\helpers" />
+      <recent name="F:\Vagrant Boxes\LaravelProject\shared\database\factories" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Vagrant Boxes\LaravelProject\shared\public\images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -169,7 +196,9 @@
       <workItem from="1601305233853" duration="11457000" />
       <workItem from="1601343244472" duration="2709000" />
       <workItem from="1601348170160" duration="2215000" />
-      <workItem from="1601389641451" duration="6580000" />
+      <workItem from="1601389641451" duration="23398000" />
+      <workItem from="1601479783597" duration="15845000" />
+      <workItem from="1601582782689" duration="15983000" />
     </task>
     <servers />
   </component>
@@ -181,10 +210,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="201" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1601307690109" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601401881668">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601587458835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1601401881668" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1601587458835" />
+    <state x="751" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#0" timestamp="1601434215561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#0/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1601434215561" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601305688088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -209,5 +242,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1601351894406" />
+    <state x="2423" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1601523759606">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state x="2423" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1601523759606" />
   </component>
 </project>

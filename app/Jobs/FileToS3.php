@@ -22,7 +22,7 @@ class FileToS3 implements ShouldQueue
         $files = Media::where('disk','local')->get();
         foreach ($files as $file)
         {
-            $model = app()->make($file->model_type)::findOrFail(2);
+            $model = app()->make($file->model_type)::findOrFail($file->model_id);
             $file->move($model, $file->collection_name, 's3');
         }
     }

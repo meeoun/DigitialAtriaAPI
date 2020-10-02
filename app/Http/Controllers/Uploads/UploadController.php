@@ -15,7 +15,6 @@ class UploadController extends APIController
     {
         $post->addMedia($request->image)
             ->toMediaCollection($request->placement);
-
         FileToS3::dispatch();
         return $this->JSON("Image Added");
     }
@@ -25,5 +24,7 @@ class UploadController extends APIController
         DestroyFile::dispatch($media);
         return $this->JSON("File Destroyed");
     }
+
+
 
 }
