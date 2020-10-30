@@ -2,8 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Author;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\User;
+use Database\Factories\CommentFactory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -24,11 +27,15 @@ class DatabaseSeeder extends Seeder
         $this->removeFiles();
         $this->dropTables();
         $this->getImage();
-        $users = User::factory(10)->create();
-        $posts = Post::factory(5)->create();
+        $users = User::factory(20)->create();
+        $this->imageAuthors();
+        $posts = Post::factory(100)->create();
+        $comments = Comment::factory(200)->create();
         $this->imagePosts($posts);
+
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
+
 
     public function getImage()
     {
@@ -43,12 +50,26 @@ class DatabaseSeeder extends Seeder
     }
 
 
+    public function imageAuthors()
+    {
+        foreach(Author::withoutGlobalScope("author")->get() as $user)
+        {
+            $user->addMedia($this->imagePath)->preservingOriginal()->toMediaCollection('bio');
+        }
+    }
+
+
+
     public function imagePosts($posts)
     {
         foreach ($posts as $post)
         {
             //Main Image
             $post->addMedia($this->imagePath)->preservingOriginal()->toMediaCollection('main');
+
+            //Banner Image
+
+            $post->addMedia($this->imagePath)->preservingOriginal()->toMediaCollection('banner');
 
             //Post Carousel
             for($i=0; $i< rand(1,6); $i++)
@@ -59,7 +80,7 @@ class DatabaseSeeder extends Seeder
             //Gallery
             for($i=0; $i< rand(1,6); $i++)
             {
-                $post->addMedia($this->imagePath)->preservingOriginal()->toMediaCollection('gallery');
+                $post->addMedia($this->imagePath)->preservingOriginal()->withCustomProperties(['caption' => 'This is a Caption!'])->toMediaCollection('gallery');
             }
         }
 
@@ -77,5 +98,6 @@ class DatabaseSeeder extends Seeder
     public function dropTables(){
         Post::truncate();
         User::truncate();
+        Comment::truncate();
     }
 }

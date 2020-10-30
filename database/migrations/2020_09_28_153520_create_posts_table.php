@@ -20,10 +20,12 @@ class CreatePostsTable extends Migration
             $table->text('excerpt')->nullable();
             $table->text('summary')->nullable();
             $table->text('gallery_caption')->nullable();
+            $table->decimal('average_score',8,1,true)->nullable();
+            $table->string('score_description')->nullable();
             $table->longText('content');
             $table->unsignedBigInteger('user_id');
             $table->json('review_scores')->nullable();
-            $table->integer('max_review_score')->default(10);
+            $table->integer('max_review_score')->default(10)->nullable();
             $table->unsignedInteger('views')->default(0);
             $table->text('review_call_out')->nullable();
             $table->enum('type',['reviews','tutorials','news'])->nullable();

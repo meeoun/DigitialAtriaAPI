@@ -4,6 +4,7 @@ namespace App\Repositories\Eloquent;
 
 use App\Repositories\Contracts\IBase;
 use App\Repositories\Criteria\ICriteria;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Arr;
 
 
@@ -33,6 +34,7 @@ abstract class BaseRepository implements IBase, ICriteria
         return $this->model->get();
     }
 
+
     public function find(int $id)
     {
         return $this->model->findOrFail($id);
@@ -49,10 +51,12 @@ abstract class BaseRepository implements IBase, ICriteria
     {
         return $this->model->where($column, $value)->firstOrFail();
     }
-    public function paginate($perPage = 10)
+
+    public function paginate($perPage = 10, $query = null)
     {
-        return $this->model->paginate($perPage);
+        return $this->model->paginate($perPage)->appends($query);
     }
+
     public function create(array $data)
     {
         return $this->model->create($data);

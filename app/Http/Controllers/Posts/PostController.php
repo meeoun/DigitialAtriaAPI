@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Posts;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PostAssets;
 use App\Http\Resources\PostResource;
-use App\Models\Comment;
 use App\Models\Post;
 use App\Repositories\Contracts\IPost;
+use App\Repositories\Eloquent\Criteria\EagerLoad;
+use App\Repositories\Eloquent\Criteria\Query;
 use Illuminate\Http\Request;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 
 class PostController extends Controller
 {
@@ -21,12 +23,35 @@ class PostController extends Controller
 
 
 
+    public function index(Request $request)
+    {
+
+        $posts = null;
+        if($request->has('limit'))
+        {
+            $posts = $this->posts->withCriteria(new Query($request->query),
+                new EagerLoad(['comments', 'media', 'user']))->all();
+
+        }else{
+
+            $posts = $this->posts->withCriteria(new Query($request->query),
+                new EagerLoad(['comments', 'media', 'user']))
+                ->paginate(10,$request->query->all());
+        }
+
+        if($request->has('assets'))
+        {
+            return PostAssets::collection($posts);
+        }
+        return PostResource::collection($posts);
+    }
+
+
+
+
     public function show(Post $post)
     {
-        $posts = $this->posts->all();
-
-        dd($posts);
-        return new PostResource($post);
+        return PostResource::collection($post);
     }
 
 }

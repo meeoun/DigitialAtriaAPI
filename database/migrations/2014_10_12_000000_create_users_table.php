@@ -19,6 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('admin')->default(false);
+            $table->boolean('active_author')->default(false);
+            $table->boolean('can_approve')->default(false);
+            $table->boolean('can_self_approve')->default(false);
+            $table->text('bio')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
