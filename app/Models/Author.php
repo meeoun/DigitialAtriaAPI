@@ -17,6 +17,7 @@ class Author extends Model implements HasMedia
 
     protected $table = "users";
     protected $hidden = ["active_author","admin","can_approve","can_self_approve","email_verified_at","password","remember_token"];
+    public static $paginate = 6;
 
     protected static function booted()
     {
@@ -48,6 +49,11 @@ class Author extends Model implements HasMedia
     public function types()
     {
         return $this->posts()->pluck('type')->unique();
+    }
+
+    public function morePosts($limit)
+    {
+        return $this->posts()->orderBy('published_at', 'desc')->limit($limit)->get();
     }
 
 

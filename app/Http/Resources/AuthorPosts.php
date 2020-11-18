@@ -5,6 +5,7 @@ namespace App\Http\Resources;
 use App\Http\Resources\Authors\AuthorPostAsset;
 use App\Repositories\Contracts\IAuthor;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\URL;
 
 class AuthorPosts extends JsonResource
 {
@@ -17,8 +18,10 @@ class AuthorPosts extends JsonResource
      */
     public function toArray($request)
     {
-
-        $posts = $this->posts()->paginate(4)->appends(["user_id"=>$this->id]);
+        $paginate = 4;
+        $posts = $this->posts()->paginate($paginate)
+            ->appends(["user_id"=>$this->id,"assets"=>"true", "paginate"=>$paginate])
+            ->withPath(URL::to('/'). '/api/posts');
         $links = $posts->toArray()["links"];
         return [
             'id' => $this->id,

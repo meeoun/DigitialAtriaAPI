@@ -20,29 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="631d0144-3808-48cf-a823-26a18ef4f7b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/Criteria/Latest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shared.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shared.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Posts/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/AuthorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/AuthorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/AuthorPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/AuthorPosts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/AuthorResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/AuthorResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/PostResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/PostResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/PostShortResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/PostAssets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Author.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/MorphMapProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/MorphMapProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Contracts/IPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Contracts/IPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/PostRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_153520_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_153520_create_posts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +180,8 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/calebporzio/parental" />
+      <path value="$PROJECT_DIR$/vendor/anhskohbo/no-captcha" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i91wXDNPIBwdFzms5PtzvjdMyo" />
@@ -253,6 +250,20 @@
       <workItem from="1603825878329" duration="1818000" />
       <workItem from="1603899991589" duration="19723000" />
       <workItem from="1604019783758" duration="5224000" />
+      <workItem from="1604062346942" duration="8719000" />
+      <workItem from="1604544500625" duration="598000" />
+      <workItem from="1604698680785" duration="718000" />
+      <workItem from="1604879005100" duration="7602000" />
+      <workItem from="1604963902567" duration="1941000" />
+      <workItem from="1604973806718" duration="4662000" />
+      <workItem from="1605023567916" duration="8494000" />
+      <workItem from="1605133433414" duration="7972000" />
+      <workItem from="1605229769891" duration="3175000" />
+      <workItem from="1605311374668" duration="3268000" />
+      <workItem from="1605382961250" duration="19791000" />
+      <workItem from="1605450279935" duration="11539000" />
+      <workItem from="1605548766987" duration="5420000" />
+      <workItem from="1605629528276" duration="2281000" />
     </task>
     <servers />
   </component>
@@ -280,11 +291,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="533" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1602436060291" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604028078989">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605572534544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1604028078989" />
-    <state x="2524" y="266" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1602984836735" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1605572534544" />
+    <state x="2524" y="266" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1605056908780" />
     <state x="751" y="383" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#0" timestamp="1601434215561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -321,9 +332,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1602437139839" />
-    <state x="2423" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1601523759606">
-      <screen x="1920" y="0" width="1680" height="1010" />
+    <state x="575" y="223" width="768" height="699" key="search.everywhere.popup" timestamp="1605483618755">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="575" y="223" width="768" height="699" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1605483618755" />
     <state x="2423" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1601523759606" />
   </component>
 </project>

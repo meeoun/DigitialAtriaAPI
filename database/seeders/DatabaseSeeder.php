@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Author;
 use App\Models\Comment;
 use App\Models\Post;
+use App\Models\SiteSetting;
 use App\Models\User;
 use Database\Factories\CommentFactory;
 use Illuminate\Database\Seeder;
@@ -32,8 +33,37 @@ class DatabaseSeeder extends Seeder
         $posts = Post::factory(100)->create();
         $comments = Comment::factory(200)->create();
         $this->imagePosts($posts);
+        $this->tagPosts();
+        $this->siteSettings();
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+    }
+
+
+    public function siteSettings()
+    {
+        $faker = \Faker\Factory::create();
+        SiteSetting::create(['title'=>'About', 'setting'=>$faker->realText(100)]);
+        SiteSetting::create(['title'=>'Contact', 'setting'=>$faker->realText(100)]);
+    }
+
+
+
+    public function tagPosts()
+    {
+        $posts = Post::all();
+        $faker = \Faker\Factory::create();
+        foreach ($posts as $post)
+        {
+
+            if($post->tags->count() < 1)
+            {
+                for ($i=0; $i < rand(1,10);$i++)
+                {
+                    $post->attachTag($faker->word);
+                }
+            }
+        }
     }
 
 
@@ -99,5 +129,8 @@ class DatabaseSeeder extends Seeder
         Post::truncate();
         User::truncate();
         Comment::truncate();
+        SiteSetting::truncate();
+        DB::table('tags')->truncate();
+        DB::table('taggables')->truncate();
     }
 }

@@ -30,6 +30,7 @@ class PostResource extends JsonResource
             'summary' => $this->summary,
             'gallery_caption' => $this->gallery_caption,
             'content' => $this->content,
+            'tags'=>TagResource::collection($this->tags),
             $this->mergeWhen($this->type === 'reviews',[
             'average_score'=>$this->average_score,
             'score_description'=> $this->score_description,
@@ -49,7 +50,8 @@ class PostResource extends JsonResource
                 'published' => $this->published_at ? $this->published_at->diffForHumans() : null,
                 'published_at' => $this->published_at
             ],
-            'comment_data'=> ["comments"=>CommentResource::collection($comments),"links"=> $links]
+            'comment_data'=> ["comments"=>CommentResource::collection($comments),"links"=> $links],
+            'also_like'=>PostAssets::collection($this->alsoLikes())
         ];
     }
 }

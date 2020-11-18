@@ -11,5 +11,16 @@ class PostRepository extends BaseRepository implements IPost
         return Post::class;
     }
 
+    public function tagged($slug)
+    {
+        return $this->model->withAnyTags($slug)->get();
+    }
+    public function search($search)
+    {
+        return $this->model
+            ->where('title','like',"%$search%")
+            ->orWhere('content','like',"%$search%");
+    }
+
 
 }

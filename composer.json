@@ -9,7 +9,10 @@
     "license": "MIT",
     "require": {
         "php": "^7.3",
+        "ext-json": "*",
         "algolia/algoliasearch-client-php": "^2.7",
+        "anhskohbo/no-captcha": "^3.3",
+        "calebporzio/parental": "^0.11.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -18,8 +21,7 @@
         "laravel/tinker": "^2.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "spatie/laravel-medialibrary": "^8.0.0",
-        "spatie/laravel-tags": "^3.0",
-        "ext-json": "*"
+        "spatie/laravel-tags": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

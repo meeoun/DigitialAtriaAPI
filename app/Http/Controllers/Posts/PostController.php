@@ -25,6 +25,10 @@ class PostController extends Controller
 
     public function index(Request $request)
     {
+        $paginate = 10;
+        if($request->has('paginate')){
+            $paginate = $request->get('paginate');
+        }
 
         $posts = null;
         if($request->has('limit'))
@@ -36,7 +40,7 @@ class PostController extends Controller
 
             $posts = $this->posts->withCriteria(new Query($request->query),
                 new EagerLoad(['comments', 'media', 'user']))
-                ->paginate(10,$request->query->all());
+                ->paginate($paginate,$request->query->all());
         }
 
         if($request->has('assets'))
@@ -51,7 +55,20 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        return PostResource::collection($post);
+
+        return new PostResource($post);
+    }
+
+    public function search(Request $request)
+    {
+        $filter = $request->get('search');
+
+        $posts = $this->posts
+            ->search($filter)
+            ->paginate(Post::$paginate)->appends(["search"=>$filter]);
+
+        return PostResource::collection($posts);
+
     }
 
 }

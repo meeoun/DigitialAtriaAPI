@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Post;
+use App\Models\Posts\PublishedPost;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,7 +27,7 @@ class MorphMapProvider extends ServiceProvider
     public function boot()
     {
         Relation::morphMap([
-            'posts' => Post::class
+           'posts' => Post::class,
         ]);
     }
 }

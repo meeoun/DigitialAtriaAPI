@@ -8,6 +8,7 @@ use App\Http\Resources\AuthorResource;
 use App\Http\Resources\PostResource;
 use App\Models\Author;
 use App\Repositories\Contracts\IAuthor;
+use App\Repositories\Eloquent\Criteria\Latest;
 use App\Repositories\Eloquent\Criteria\Query;
 use Illuminate\Http\Request;
 
@@ -28,12 +29,12 @@ class AuthorController extends Controller
         $authors = null;
         if($request->has('limit'))
         {
-            $authors = $this->authors->withCriteria(new Query($request->query))->all();
+            $authors = $this->authors->withCriteria(new Query($request->query), new Latest())->all();
 
         }else{
 
-            $authors = $this->authors->withCriteria(new Query($request->query))
-                ->paginate(2);
+            $authors = $this->authors->withCriteria(new Query($request->query), new Latest())
+                ->paginate(Author::$paginate);
         }
         return AuthorResource::collection($authors);
     }
@@ -41,6 +42,8 @@ class AuthorController extends Controller
 
     public function posts(Author $author)
     {
+
+
        return new AuthorPosts($author);
     }
 
